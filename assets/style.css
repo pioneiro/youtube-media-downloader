@@ -22,6 +22,7 @@ main {
 	font-size: 64px;
 	margin-bottom: 32px;
 	text-transform: uppercase;
+	max-width: 80%;
 }
 
 #form {
