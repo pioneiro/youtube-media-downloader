@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style.css" />
+		<title>Download</title>
+	</head>
+
+	<body>
+		<main>
+			<h2 id="videoTitle"><%= title %></h2>
+
+			<!-- <img src="<%= thumbnail %>" alt="<%= title %>" /> -->
+
+			<form action="/download" method="POST" id="downloadForm">
+				<button type="button" id="back">Back</button>
+				<input type="url" name="videoURL" readonly hidden value="<%= url %> " />
+
+				<select name="avid" id="avid">
+					<% options.forEach(e=> { %>
+					<option value="<%= e.itag %>">
+						<%= e.mimeType.slice(0, e.mimeType.indexOf("/")) %> <% if
+						(e.qualityLabel) { %> <%= e.qualityLabel %> <% } else { %> <%=
+						e.audioBitrate %>kbps <% } %>
+					</option>
+
+					<% }) %>
+				</select>
+
+				<button type="submit" id="download">Download</button>
+			</form>
+		</main>
+		<script type="text/javascript">
+			document
+				.getElementById("back")
+				.addEventListener("click", (e) => history.back());
+		</script>
+	</body>
+</html>

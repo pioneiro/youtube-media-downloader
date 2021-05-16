@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+main {
+	height: 100vh;
+	width: 100vw;
+	background-color: #d8f3dc;
+	color: #081c15;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#brand,
+#videoTitle {
+	font-family: monospace;
+	font-size: 64px;
+	margin-bottom: 32px;
+	text-transform: uppercase;
+}
+
+#form {
+	width: 66vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+#videoURL {
+	width: 80%;
+	padding: 16px 32px;
+	caret-color: #081c15;
+	color: #081c15;
+	background-color: #40916c;
+	font-size: 32px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	border: none;
+	border-radius: 64px;
+}
+
+#downloadForm {
+	width: 50vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+#avid {
+	width: 50%;
+	padding: 8px 16px;
+	color: #081c15;
+	background-color: #40916c;
+	font-size: 32px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	border: none;
+	border-radius: 40px;
+	text-transform: capitalize;
+}
+
+#download,
+#back {
+	cursor: pointer;
+	padding: 0 32px;
+	font-size: 32px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: #40916c;
+	color: #081c15;
+	border: none;
+	border-radius: 64px;
+}
