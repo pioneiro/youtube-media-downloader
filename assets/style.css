@@ -43,6 +43,10 @@ main {
 	border-radius: 64px;
 }
 
+#videoURL::placeholder {
+	color: #081c15;
+}
+
 #downloadForm {
 	width: 50vw;
 	display: flex;
